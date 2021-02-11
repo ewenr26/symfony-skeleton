@@ -1,0 +1,52 @@
+{% extends 'admin.html.twig' %}
+{% block title %}Prestations{% endblock %}
+{% block body %}
+
+    <div class="container services">
+
+        <div class="servicesTitleBar">
+            <h1 class="services__title">Prestations</h1>
+            <a class="buttonOutline" href="{{ path('admin_services_new') }}">Ajouter une prestation</a>
+        </div>
+
+        <table>
+            <thead>
+            <tr>
+                <td>Nom</td>
+                <td>Temps</td>
+                <td>Prix</td>
+                <td>Actions</td>
+            </tr>
+            </thead>
+            <tbody>
+            {% for service in services %}
+                {% if not service.archived %}
+                    <tr>
+                        <td>{{ service.name }}</td>
+                        <td>{{ service.timePeriod | date("H:i") }}</td>
+                        <td>
+                            <div>
+                                <span>
+                                    {{ most_recent_date(service.serviceDates).price }}€
+                                </span>
+                                <i class="fas fa-history"></i>
+                            </div>
+
+                        </td>
+                        <td class="actions">
+                            <div>
+                                <a href="{{ path('admin_services_archive', {'id': service.id}) }}"><i
+                                            class="fas fa-trash"></i></a>
+                                <a href="{{ path('admin_services_edit', {'id': service.id}) }}"><i
+                                            class="fas fa-pen"></i></a>
+                            </div>
+                        </td>
+
+                    </tr>
+                {% endif %}
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,6 @@
+App\Domain\Auth\User:
+  user{1..5} (extends user):
+  admin (extends user):
+    username: ewenr26
+    email: rouloisewen@gmail.com
+    roles: [ 'ROLE_SUPER_ADMIN' ]

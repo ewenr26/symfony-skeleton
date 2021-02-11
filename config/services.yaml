@@ -1,0 +1,27 @@
+parameters:
+
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  App\:
+    resource: '../src/*'
+    exclude:
+      - '../src/DependencyInjection/'
+      - '../src/Entity/'
+      - '../src/Infrastructure/Migrations/'
+      - '../src/Kernel.php'
+      - '../src/Tests/'
+
+  App\Http\Controller\:
+    resource: '../src/Http/Controller'
+    tags: [ 'controller.service_arguments' ]
+
+  App\Http\Admin\Controller\:
+    resource: '../src/Http/Admin/Controller'
+    tags: [ 'controller.service_arguments' ]
+
+  App\Http\Api\Controller\:
+    resource: '../src/Http/Api/Controller'
+    tags: [ 'controller.service_arguments' ]

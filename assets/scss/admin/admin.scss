@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@import "utils/reset";
+@import "utils/variables";
+@import "utils/responsive";
+
+@import "parts/parts";
+
+@import "pages/pages";
+
+* {
+  font-family: "Roboto", serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $white;
+}
+
+.container {
+  margin: 2rem 2rem 2rem calc(#{$navbarWidth} + 2rem);
+}

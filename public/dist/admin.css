@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Navbar */
+/* Colors */
+.container {
+  max-width: 100%;
+}
+
+.buttonOutline {
+  border: 1px solid #425644;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  transition: 0.4s ease;
+}
+.buttonOutline:hover {
+  background-color: #425644;
+  color: #F8F1F1;
+}
+
+.button {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  transition: 0.4s ease;
+  color: #F8F1F1;
+  background-color: #425644;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.button:hover {
+  color: #000;
+  background-color: #F8F1F1;
+  border: 1px solid #425644;
+}
+
+.navbar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 1rem;
+}
+.navbar hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.navbarLinks {
+  display: flex;
+  flex-direction: column;
+}
+.navbarLinks li {
+  padding: 0.25rem 0;
+}
+.navbarLinks li a {
+  color: rgba(0, 0, 0, 0.5);
+}
+.navbarLinks li a.active {
+  color: #000;
+}
+
+.body {
+  background-color: #F8F1F1;
+}
+
+.form {
+  margin: 1rem 0;
+}
+.form-errors {
+  width: 100%;
+  display: block;
+  margin-top: 0.5rem;
+  color: red;
+}
+.form-errors p i {
+  margin-right: 0.25rem;
+}
+.form-row .form-group {
+  width: 50%;
+  padding: 0 15px;
+}
+.form-group {
+  margin-bottom: 23px;
+  position: relative;
+}
+.form-group label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.form-group input {
+  display: block;
+  width: 100%;
+  border: 1px solid #425644;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.form-group div select {
+  border: 1px solid #425644;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.form-submit {
+  text-align: right;
+}
+
+.servicesTitleBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+.services__title {
+  font-size: 2rem;
+}
+.services table {
+  width: 100%;
+}
+.services table thead {
+  background-color: #425644;
+  color: #F8F1F1;
+}
+.services table thead tr td {
+  padding: 0.75rem;
+}
+.services table thead tr td:first-child {
+  border-radius: 0.75rem 0 0 0;
+}
+.services table thead tr td:last-child {
+  border-radius: 0 0.75rem 0 0;
+}
+.services table tbody tr td {
+  padding: 0.75rem;
+  border: 1px solid rgba(66, 86, 68, 0.2);
+}
+.services table tbody tr td div {
+  display: flex;
+  justify-content: space-between;
+}
+.services table tbody tr td.actions {
+  width: 10%;
+}
+.services table tbody tr td.actions div {
+  display: flex;
+  justify-content: center;
+}
+.services table tbody tr td.actions div a {
+  padding: 10px;
+}
+.services table tbody tr td.actions div a i.fa-trash {
+  color: #ff4d4d;
+}
+.services table tbody tr td.actions div a i.fa-pen {
+  color: royalblue;
+}
+.services table tbody tr:nth-child(even) {
+  background-color: rgba(228, 169, 157, 0.2);
+}
+.services table tbody tr:last-child td:last-child {
+  border-radius: 0.75rem 0 0 0;
+}
+.services table tbody tr:last-child td:first-child {
+  border-radius: 0 0.75rem 0 0;
+}
+
+* {
+  font-family: "Roboto", serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F8F1F1;
+}
+
+.container {
+  margin: 2rem 2rem 2rem calc(200px + 2rem);
+}
+
+/*# sourceMappingURL=/admin.css.map */

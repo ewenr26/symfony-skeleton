@@ -1,0 +1,15 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.32.5"
+  },
+  "scripts": {
+    "devfront": "parcel watch assets/scss/front/front.scss --out-dir public/dist",
+    "devadmin": "parcel watch assets/scss/admin/admin.scss --out-dir public/dist",
+    "build": "parcel build assets/scss/front/front.scss --out-dir public/dist"
+  },
+  "dependencies": {}
+}

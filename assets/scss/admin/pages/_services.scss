@@ -1,0 +1,86 @@
+.services {
+
+  &TitleBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  table {
+    width: 100%;
+
+    thead {
+      background-color: $secondaryColor;
+      color: $white;
+
+      tr {
+        td {
+          padding: 0.75rem;
+        }
+
+        td:first-child {
+          border-radius: 0.75rem 0 0 0;
+        }
+
+        td:last-child {
+          border-radius: 0 0.75rem 0 0;
+        }
+      }
+    }
+
+    tbody {
+
+      tr {
+        td {
+          padding: 0.75rem;
+          border: 1px solid rgba($secondaryColor, 0.2);
+
+          div {
+            display: flex;
+            justify-content: space-between;
+          }
+
+          &.actions {
+            width: 10%;
+
+            div {
+              display: flex;
+              justify-content: center;
+
+              a {
+                padding: 10px;
+
+                i.fa-trash {
+                  color: #ff4d4d;
+                }
+
+                i.fa-pen {
+                  color: royalblue;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      tr:nth-child(even) {
+        background-color: rgba($tertiaryColor, 0.2);
+      }
+
+      tr:last-child {
+        td:last-child {
+          border-radius: 0.75rem 0 0 0;
+        }
+
+        td:first-child {
+          border-radius: 0 0.75rem 0 0;
+        }
+      }
+    }
+  }
+}

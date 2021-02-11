@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  padding: 0 10px;
+
+  &Menu {
+    display: none;
+
+    &__links {
+      &--mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    display: none;
+
+    &--mobile {
+      display: block;
+    }
+  }
+}
+

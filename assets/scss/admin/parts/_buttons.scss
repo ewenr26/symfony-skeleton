@@ -1,0 +1,26 @@
+.buttonOutline {
+  border: 1px solid $secondaryColor;
+  padding: .75rem 1rem;
+  border-radius: .75rem;
+  transition: .4s ease;
+
+  &:hover {
+    background-color: $secondaryColor;
+    color: $white;
+  }
+}
+
+.button {
+  padding: .75rem 1rem;
+  border-radius: .75rem;
+  transition: .4s ease;
+  color: $white;
+  background-color: $secondaryColor;
+  border: 1px solid rgba(#000, 0);
+
+  &:hover {
+    color: #000;
+    background-color: $white;
+    border: 1px solid $secondaryColor;
+  }
+}

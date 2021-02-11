@@ -1,0 +1,20 @@
+{% extends 'admin.html.twig' %}
+
+{% block body %}
+    <div class="container services">
+
+        <h1 class="services__title">Modifier {{ service.name }}</h1>
+        {% embed "admin/services/_form.html.twig" %}
+            {% block submit %}
+                <div class="form-submit">
+                    <button type="submit" class="button">Ajouter</button>
+                </div>
+            {% endblock %}
+        {% endembed %}
+    </div>
+{% endblock %}
+
+    {% block title %}
+
+    {% endblock %}
+
